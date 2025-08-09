@@ -51,7 +51,6 @@ const MovieModal = ({ movie, onClose }: MovieModalProps) => {
             movie.backdrop_path
               ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
               : "https://placehold.co/500x750?text=No+Image"
-            // : "https://via.placeholder.com/1280x720?text=No+Image"
           }
           alt={movie.title}
           className={styles.image}

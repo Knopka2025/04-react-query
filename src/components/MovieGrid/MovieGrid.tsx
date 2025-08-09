@@ -7,7 +7,7 @@ interface MovieGridProps {
 }
 
 const MovieGrid = ({ movies, onSelect }: MovieGridProps) => {
-  // 🔍 Унікалізація фільмів за ID
+
   const uniqueMovies = Array.from(new Map(movies.map((m) => [m.id, m])).values());
 
   if (!uniqueMovies.length) return null;
