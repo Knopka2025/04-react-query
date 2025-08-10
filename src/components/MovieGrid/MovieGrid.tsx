@@ -7,14 +7,11 @@ interface MovieGridProps {
 }
 
 const MovieGrid = ({ movies, onSelect }: MovieGridProps) => {
-
-  const uniqueMovies = Array.from(new Map(movies.map((m) => [m.id, m])).values());
-
-  if (!uniqueMovies.length) return null;
+  if (!movies.length) return null;
 
   return (
     <ul className={styles.grid}>
-      {uniqueMovies.map((movie) => (
+      {movies.map((movie) => (
         <li key={movie.id}>
           <div className={styles.card} onClick={() => onSelect(movie)}>
             <img
@@ -35,4 +32,4 @@ const MovieGrid = ({ movies, onSelect }: MovieGridProps) => {
   );
 };
 
-export default MovieGrid
+export default MovieGrid;

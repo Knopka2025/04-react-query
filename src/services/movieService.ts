@@ -27,4 +27,3 @@ export const fetchMovies = async (
 
   return data;
 };
-
